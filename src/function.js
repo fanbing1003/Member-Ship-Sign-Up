@@ -54,30 +54,3 @@ export function confirmInformation(name, mobile, email, postcode, setShowPop) {
 
 /* Following code is provided by Cin7 Core API*/
 /* need to confirm POST or PUT which one works better*/
-function postInfo() {
-  var request = new XMLHttpRequest();
-
-  request.open(
-    "POST", /*or PUT*/ 
-    "https://inventory.dearsystems.com/ExternalApi/v2/customer"
-  );
-
-  request.setRequestHeader("Content-Type", "application/json");
-  request.setRequestHeader(
-    "api-auth-accountid",
-    "auth-id"
-  );
-  request.setRequestHeader(
-    "api-auth-applicationkey",
-    "auth-key"
-  );
-
-  request.onreadystatechange = function () {
-    if (this.readyState === 4) {
-      console.log("Status:", this.status);
-      console.log("Headers:", this.getAllResponseHeaders());
-      console.log("Body:", this.responseText);
-    }
-  };
-  request.send(JSON.stringify(body));
-}
