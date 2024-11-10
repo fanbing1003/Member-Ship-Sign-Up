@@ -1,5 +1,3 @@
-import Popup from "reactjs-popup";
-
 export function confirmInformation(name, mobile, email, postcode, setShowPop) {
   var CustomerInformation = {
     Name: name,
@@ -47,10 +45,9 @@ export function confirmInformation(name, mobile, email, postcode, setShowPop) {
       },
     ],
   };
+  console.log(CustomerInformation);
   setShowPop(false);
 }
-
-
 
 /* Following code is provided by Cin7 Core API*/
 /* need to confirm POST or PUT which one works better*/

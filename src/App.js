@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ fontSize: "43px", fontFamily: "Cochin"}}>
+          <p style={{ fontSize: "43px", fontFamily: "Cochin" }}>
             Davey's Asian Supermarket Membership Sign Up
           </p>
           <img
@@ -42,7 +42,7 @@ function App() {
             borderRadius: "10px",
           }}
         >
-          <p style={{ marginLeft: "20px", marginRight: "20px"}}>
+          <p style={{ marginLeft: "20px", marginRight: "20px" }}>
             Terms & Conditions of Membership
           </p>
         </h1>
@@ -128,7 +128,7 @@ function App() {
               width: "100px",
               height: "35px",
               marginTop: "20px", // Adds spacing between the button and the input above
-              borderRadius: "10px"
+              borderRadius: "10px",
             }}
           >
             Submit
@@ -137,7 +137,7 @@ function App() {
             <div
               style={{
                 padding: "20px",
-                
+
                 width: "100%",
                 height: "100%",
                 backgroundColor: "white",
@@ -153,7 +153,9 @@ function App() {
               <p>Your Mobile Number: {mobile}</p>
               <p>Your Email: {email}</p>
               <p>Your Postcode: {postcode}</p>
-              <p style={{color: "red"}}>By clicking the confirm, you agree the terms and conditions</p>
+              <p style={{ color: "red" }}>
+                By clicking the confirm, you agree the terms and conditions
+              </p>
               <button
                 onClick={() => setShowPop(false)}
                 style={{ width: "60px" }}
