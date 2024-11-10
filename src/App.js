@@ -197,7 +197,6 @@ function App() {
                   justifyContent: "space-between",
                   alignItems: "center",
                   margin: 0,
-
                 }}
               >
                 <button
@@ -207,6 +206,8 @@ function App() {
                     height: "25px",
                     backgroundColor: "lightcoral",
                     borderRadius: "10px",
+                    padding: "0", // Remove extra padding
+                    textAlign: "center", // Centers text horizontally
                   }}
                 >
                   Edit
@@ -226,6 +227,8 @@ function App() {
                     height: "27px",
                     backgroundColor: "lightgreen",
                     borderRadius: "10px",
+                    padding: "0", // Remove extra padding
+                    textAlign: "center", // Centers text horizontally
                   }}
                 >
                   Confirm
