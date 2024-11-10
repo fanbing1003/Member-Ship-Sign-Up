@@ -14,22 +14,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ fontSize: "30px", fontFamily: "Cochin" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            marginTop: "40px",
+          }}
+        >
+          <img src={logo} className="App-logo" alt="logo" />
+          <p style={{ fontSize: "40px", fontFamily: "Cochin" }}>
             Davey's Asian Supermarket Membership Sign Up
           </p>
-          <img
-            src={logo}
-            className="App-logo"
-            alt="logo"
-            style={{
-              textAlign: "Left",
-              marginLeft: "40px",
-              marginRight: "40px",
-              marginTop: "40px",
-              marginbuttom: "40px",
-            }}
-          />
         </div>
       </header>
       <div className="App-TandC">
