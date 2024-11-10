@@ -197,13 +197,14 @@ function App() {
                   justifyContent: "space-between",
                   alignItems: "center",
                   margin: 0,
-                  
+
                 }}
               >
                 <button
                   onClick={() => setShowPop(false)}
                   style={{
                     width: "60px",
+                    height: "25px",
                     backgroundColor: "lightcoral",
                     borderRadius: "10px",
                   }}
@@ -222,6 +223,7 @@ function App() {
                   }
                   style={{
                     width: "60px",
+                    height: "27px",
                     backgroundColor: "lightgreen",
                     borderRadius: "10px",
                   }}
