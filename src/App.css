@@ -1,13 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .App {
   text-align: center;
   background-image: url("./Images/main.jpg");
-  height: 100%;
-  width: 100%;
-  min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh; /* Ensures it covers the full viewport height */
+  width: 100vw; /* Ensures full viewport width */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden; /* Prevent scrollbars */
 }
 
 .App-logo {
