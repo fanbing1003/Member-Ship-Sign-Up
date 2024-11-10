@@ -191,20 +191,44 @@ function App() {
               <p style={{ color: "red" }}>
                 By clicking the confirm, you agree the terms and conditions
               </p>
-              <button
-                onClick={() => setShowPop(false)}
-                style={{ width: "60px" }}
+              <h1
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  margin: 0,
+                  
+                }}
               >
-                Edit
-              </button>
-              <button
-                onClick={() =>
-                  confirmInformation(name, mobile, email, postcode, setShowPop)
-                }
-                style={{ width: "60px", backgroundColor: "lightgreen" }}
-              >
-                Confirm
-              </button>
+                <button
+                  onClick={() => setShowPop(false)}
+                  style={{
+                    width: "60px",
+                    backgroundColor: "lightcoral",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() =>
+                    confirmInformation(
+                      name,
+                      mobile,
+                      email,
+                      postcode,
+                      setShowPop
+                    )
+                  }
+                  style={{
+                    width: "60px",
+                    backgroundColor: "lightgreen",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Confirm
+                </button>
+              </h1>
             </div>
           </Popup>
         </div>
