@@ -137,7 +137,7 @@ function App() {
             <div
               style={{
                 padding: "20px",
-                textAlign: "center",
+                
                 width: "100%",
                 height: "100%",
                 backgroundColor: "white",
