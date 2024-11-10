@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ fontSize: "43px", fontFamily: "Cochin" }}>
+          <p style={{ fontSize: "30px", fontFamily: "Cochin" }}>
             Davey's Asian Supermarket Membership Sign Up
           </p>
           <img
@@ -35,7 +35,9 @@ function App() {
       <div className="App-TandC">
         <h1
           style={{
-            textAlign: "Left",
+            justifyContent: "center",
+            alignItems: "center",
+            //textAlign: "Left",
             fontSize: "25px",
             color: "white",
             backgroundColor: "red",

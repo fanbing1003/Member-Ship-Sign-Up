@@ -38,11 +38,12 @@ body {
   min-height: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
-  justify-content: flex-start; /* Align items to the top-left */
+  /*align-items: flex-start; /* Align content to the left */
+  /*justify-content: flex-start; /* Align items to the top-left */
   font-size: calc(10px + 2vmin);
   color: white;
   padding-left: 40px; /* Same left padding as header */
+  padding-right: 40px;
   padding-top: 20px; /* Add some space at the top */
   margin-top: 10px; /* Remove any extra space between sections */
 }
