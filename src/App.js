@@ -173,8 +173,7 @@ function App() {
             <div
               style={{
                 padding: "20px",
-
-                width: "100%",
+                width: "80%",
                 height: "100%",
                 backgroundColor: "white",
                 textAlign: "Left",
