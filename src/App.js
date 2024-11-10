@@ -165,6 +165,10 @@ function App() {
               height: "35px",
               marginTop: "20px", // Adds spacing between the button and the input above
               borderRadius: "10px",
+              fontWeight: "bold",
+              fontSize: "18px",
+              padding: "0", // Remove extra padding
+              textAlign: "center", // Centers text horizontally
             }}
           >
             Submit
@@ -208,6 +212,7 @@ function App() {
                     borderRadius: "10px",
                     padding: "0", // Remove extra padding
                     textAlign: "center", // Centers text horizontally
+                    fontWeight: "bold"
                   }}
                 >
                   Edit
@@ -229,6 +234,7 @@ function App() {
                     borderRadius: "10px",
                     padding: "0", // Remove extra padding
                     textAlign: "center", // Centers text horizontally
+                    fontWeight: "bold"
                   }}
                 >
                   Confirm
