@@ -30,7 +30,6 @@ body {
   /*justify-content: flex-start; /* Align items to the left */
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-left: 40px; /* Consistent padding for the header */
   padding-bottom: 20px;
 }
 
@@ -54,25 +53,13 @@ body {
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-left: 40px; /* Same left padding as header */
+/*  padding-left: 40px; /* Same left padding as header */
   padding-top: 20px; /* Add some space at the top */
   padding-bottom: 40px;
   margin-top: 0;
 }
 
-.App-information-entry {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start;
-  color: white;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-right: 40px;
-  padding-bottom: 20px;
-  margin-top: 0;
-  border-radius: 10px;
-}
+
 
 .App-link {
   color: #61dafb;

@@ -47,16 +47,17 @@ function App() {
         </h1>
         <div
           style={{
+            stifyContent: "center",
+            alignItems: "center",
             fontSize: "20px",
             textAlign: "Left",
-            marginRight: "20px",
             marginTop: "20px",
             backgroundColor: "black",
             opacity: 0.8,
             borderRadius: "10px",
           }}
         >
-          <div style={{ marginLeft: "20px", opacity: 1 }}>
+          <div style={{ marginLeft: "20px", marginRight: "20px", opacity: 1 }}>
             <p>
               This form is used to sign up for the membership of Davely's Asian
               Supermarket.
@@ -86,38 +87,74 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="App-body">
-        <div className="App-information-entry">
+      <div
+        className="App-body"
+        style={{ stifyContent: "center", alignItems: "center" }}
+      >
+        <div
+          className="App-information-entry"
+          style={{
+            backgroundColor: "#282c34",
+            display: "flex",
+            flexDirection: "column", // Stack items vertically
+            alignItems: "flex-start",
+            color: "white",
+            paddingLeft: "40px",
+            paddingTop: "20px",
+            paddingRight: "40px",
+            paddingBottom: "20px",
+            marginTop: "0",
+            borderRadius: "10px",
+          }}
+        >
           <p>Please Enter Your Name</p>
           <input
             name="inputName"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            style={{ width: "300px", height: "25px" }}
+            style={{ width: "250px", height: "25px" }}
           />
-
-          <p>Please Enter Your Mobile Number</p>
+          <p style={{ margin: "10px 0 0 0" }}>
+            Please Enter Your Mobile Number
+          </p>
+          <p
+            style={{ fontSize: "15px", margin: "5px 0 10px 0", color: "#ccc" }}
+          >
+            Example: 0432123456{" "}
+          </p>
           <input
             name="inputMobile"
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
-            style={{ width: "300px", height: "25px" }}
+            style={{ width: "250px", height: "25px" }}
           />
 
-          <p>Please Enter Your Email Address</p>
+          <p style={{ margin: "10px 0 0 0" }}>
+            Please Enter Your Email Address
+          </p>
+          <p
+            style={{ fontSize: "15px", margin: "5px 0 10px 0", color: "#ccc" }}
+          >
+            Example: example@gmail.com{" "}
+          </p>
           <input
             name="inputEmail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ width: "300px", height: "25px" }}
+            style={{ width: "250px", height: "25px" }}
           />
 
-          <p>Please Enter Your Postcode</p>
+          <p style={{ margin: "10px 0 0 0" }}>Please Enter Your Postcode</p>
+          <p
+            style={{ fontSize: "15px", margin: "5px 0 10px 0", color: "#ccc" }}
+          >
+            Example: 4000{" "}
+          </p>
           <input
             name="inputPostcode"
             value={postcode}
             onChange={(e) => setPostcode(e.target.value)}
-            style={{ width: "300px", height: "25px" }}
+            style={{ width: "250px", height: "25px" }}
           />
 
           <button
