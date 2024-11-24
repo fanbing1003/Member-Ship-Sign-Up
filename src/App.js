@@ -2,6 +2,7 @@ import logo from "./Images/Davelys Logo.jpg";
 import "./App.css";
 import { useState } from "react";
 import { confirmInformation } from "./function.js";
+import { EmailSender } from "./send-email.js"
 import Popup from "reactjs-popup";
 
 function App() {
@@ -212,21 +213,22 @@ function App() {
                     borderRadius: "10px",
                     padding: "0", // Remove extra padding
                     textAlign: "center", // Centers text horizontally
-                    fontWeight: "bold"
+                    fontWeight: "bold",
                   }}
                 >
                   Edit
                 </button>
                 <button
-                  onClick={() =>
+                  onClick={() => {
+                    EmailSender(name, mobile, email, postcode);
                     confirmInformation(
                       name,
                       mobile,
                       email,
                       postcode,
                       setShowPop
-                    )
-                  }
+                    );
+                  }}
                   style={{
                     width: "60px",
                     height: "27px",
@@ -234,7 +236,7 @@ function App() {
                     borderRadius: "10px",
                     padding: "0", // Remove extra padding
                     textAlign: "center", // Centers text horizontally
-                    fontWeight: "bold"
+                    fontWeight: "bold",
                   }}
                 >
                   Confirm
