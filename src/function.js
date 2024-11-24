@@ -45,8 +45,6 @@ export function confirmInformation(name, mobile, email, postcode, setShowPop) {
       },
     ],
   };
-  //setShowPop(false);
+  console.log(CustomerInformation);
+  setShowPop(false);
 }
-
-/* Following code is provided by Cin7 Core API*/
-/* need to confirm POST or PUT which one works better*/
