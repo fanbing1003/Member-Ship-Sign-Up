@@ -27,7 +27,7 @@ export function confirmInformation(name, mobile, email, postcode, setShowPop) {
     Tags: "Member Instore",
     Status: "Active",
     IsOnCreditHold: true,
-    Addresses: null,
+    Addresses: postcode,
     Contacts: [
       {
         ID: "1d62f59b-657d-423f-ad95-9ad9ec4f29a3",
@@ -45,8 +45,7 @@ export function confirmInformation(name, mobile, email, postcode, setShowPop) {
       },
     ],
   };
-  console.log(CustomerInformation);
-  setShowPop(false);
+  //setShowPop(false);
 }
 
 /* Following code is provided by Cin7 Core API*/
