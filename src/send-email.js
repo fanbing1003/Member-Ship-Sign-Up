@@ -4,7 +4,7 @@ export async function EmailSender(name, mobile, email, postcode) {
   console.log(name, mobile, email, postcode);
   try {
     const response = await axios.post(
-      "http://localhost:5000/sendemail",
+      "http://davelys-membership/sendemail",
       { name, mobile, email, postcode },
     );
     console.log({ name, mobile, email, postcode });
