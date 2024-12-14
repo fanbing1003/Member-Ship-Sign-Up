@@ -26,7 +26,7 @@ const html = app.post("/sendemail", (req, res) => {
   const { name, mobile, email, postcode } = req.body;
 
   const { createCanvas } = require("canvas");
-
+  console.log(process.env.EMAIL_USER, process.env.EMAIL_USER);
   const canvas = createCanvas();
   JsBarcode(canvas, mobile, {
     format: "CODE128",
