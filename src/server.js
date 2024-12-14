@@ -22,11 +22,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const html = app.post("/sendemail", (req, res) => {
+const html = app.post("./sendemail", (req, res) => {
   const { name, mobile, email, postcode } = req.body;
 
   const { createCanvas } = require("canvas");
-  console.log(process.env.EMAIL_USER, process.env.EMAIL_USER);
+  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS)
   const canvas = createCanvas();
   JsBarcode(canvas, mobile, {
     format: "CODE128",

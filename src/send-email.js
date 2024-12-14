@@ -4,7 +4,7 @@ export async function EmailSender(name, mobile, email, postcode) {
   console.log(name, mobile, email, postcode);
   try {
     const response = await axios.post(
-      "https://davelys-membership.netlify.app/sendemail",
+      "http://davelys-membership/sendemail",
       { name, mobile, email, postcode },
     );
     console.log({ name, mobile, email, postcode });
