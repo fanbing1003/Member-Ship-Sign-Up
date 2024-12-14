@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const html = app.post("./sendemail", (req, res) => {
+const html = app.post("/sendEmail", (req, res) => {
   const { name, mobile, email, postcode } = req.body;
 
   const { createCanvas } = require("canvas");
