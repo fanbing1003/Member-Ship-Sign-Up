@@ -1,43 +1,29 @@
-/*
-const express = require("express");
 const nodemailer = require("nodemailer");
-const cors = require("cors");
-require("dotenv").config();
-
 const JsBarcode = require("jsbarcode");
 const { createCanvas } = require("canvas");
+require("dotenv").config();
 
-const app = express();
+exports.handler = async (event) => {
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: "Method Not Allowed" }),
+    };
+  }
 
-// Middleware
-app.use(cors());
-app.use(express.json()); // Parses incoming JSON requests
+  try {
+    const { name, mobile, email, postcode } = JSON.parse(event.body);
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // Create App Password
-  },
-});
+    const canvas = createCanvas();
+    JsBarcode(canvas, mobile, {
+      format: "CODE128",
+      lineColor: "#000",
+      width: 2,
+      height: 100,
+    });
+    const barcodeImage = canvas.toDataURL();
 
-const html = app.post("/sendEmail", (req, res) => {
-  const { name, mobile, email, postcode } = req.body;
-
-  const { createCanvas } = require("canvas");
-  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS)
-  const canvas = createCanvas();
-  JsBarcode(canvas, mobile, {
-    format: "CODE128",
-    lineColor: "#000",
-    width: 2,
-    height: 100,
-  });
-  console.log(canvas.toDataURL());
-  const barcodeImage = canvas.toDataURL();
-  const html = `<!DOCTYPE html>
+    const html = `<!DOCTYPE html>
     <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
       <head>
         <title></title>
@@ -214,26 +200,35 @@ const html = app.post("/sendEmail", (req, res) => {
       </body>
     </html>
   `;
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: email,
-    subject: "Welcome to Davely's Asian Supermarket",
-    html: html,
-  };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Error sending email:", error);
-      console.log(error);
-      res.status(500).send({ success: false, error: error.message });
-    } else {
-      console.log("Email sent:", info.response);
-      res.send({ success: true });
-    }
-  });
-});
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
-*/
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Welcome to Davely's Asian Supermarket",
+      html: html,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true, message: "Email sent successfully!" }),
+    };
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ success: false, error: error.message }),
+    };
+  }
+};
